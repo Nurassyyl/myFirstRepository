@@ -1,1 +1,2 @@
-console.log('Helo world');
+const a = 1;
+let b = "вторая переманная";
