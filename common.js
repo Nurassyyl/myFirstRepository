@@ -1,0 +1,1 @@
+const aibek = "aibek";
