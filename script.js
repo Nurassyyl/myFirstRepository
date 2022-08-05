@@ -1,5 +1,5 @@
 "use strict";
-до 6
+// 6
 let title = prompt("Как называется ваш проект");
 console.log(title);
 let screens = prompt("Какие типы экранов нужно разработать?");
@@ -19,9 +19,9 @@ console.log(service2);
 let servicePrice2 = +prompt("Сколько это будеть стоить?");
 console.log(servicePrice2);
 
-const getAllServicePrices = function(servicePrice1, servicePrice2) {
+const getAllServicePrices = function (servicePrice1, servicePrice2) {
     return servicePrice1 + servicePrice2;
-}
+};
 const allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
 console.log(allServicePrices);
 
@@ -31,23 +31,39 @@ function getFullPrice(screenPrice, allServicePrices) {
 
 const fullPrice = getFullPrice(screenPrice, allServicePrices);
 console.log(fullPrice);
-let title = " КаЛьКулятор Верстки";
-console.log(title.toLowerCase());
 
-const getTitle = function (title) {
-    console.log(title.toLowerCase().title.toUpperCase(0));
-}
+console.log(title[1].toUpperCase().title.toLowerCase());
 
-getTitle(" КаЛьКулятор Верстки");
+// const getTitle = function (title) {
+//     console.log(title.trim().title.length);
+// };
+// getTitle(" КаЛьКулятор Верстки");
+
 
 // 10
-if (fullPrice >= 30000) {
-    console.log("Даем скидку 10%");
-} else if (fullPrice => 15000 && fullPrice <= 30000) {
-    console.log("Даем скидку 5%");
-} else if (fullPrice => 0 && fullPrice <= 15000) {
-    console.log("Скидка не предусмотрена");
-} else {
-    console.log("Что-то пошло не так");
+
+const getServicePercentPrices = function (fullPrice) {
+    if (fullPrice >= 30000) {
+        return fullPrice - (fullPrice * 10 / 100);
+    } else if (fullPrice => 15000 && fullPrice <= 30000) {
+        return fullPrice - (fullPrice * 5 / 100);
+    } else if (fullPrice => 0 && fullPrice <= 15000) {
+        return fullPrice;
+    } else {
+        console.log("Что-то пошло не так");
+    }
+};
+
+console.log(getServicePercentPrices(fullPrice));
+
+function showTypeOf(screens) {
+    return typeof screens;
 }
 
+console.log(showTypeOf(screens));
+
+function getRollbackMessage(message) {
+    return message;
+}
+
+console.log(getRollbackMessage("Вам скидка!"));
