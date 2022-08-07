@@ -32,12 +32,10 @@ function getFullPrice(screenPrice, allServicePrices) {
 const fullPrice = getFullPrice(screenPrice, allServicePrices);
 console.log(fullPrice);
 
-console.log(title[1].toUpperCase().title.toLowerCase());
-
-// const getTitle = function (title) {
-//     console.log(title.trim().title.length);
-// };
-// getTitle(" КаЛьКулятор Верстки");
+const getTitle = function (title) {
+    return title.substr(0, 1).toUpperCase() + "" + title.substr(1).toLowerCase();
+};
+console.log(getTitle(title));
 
 
 // 10
