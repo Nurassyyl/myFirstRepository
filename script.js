@@ -95,8 +95,6 @@ function getRollbackMessage(message) {
 
 console.log(asking());
 allServicePrices = console.log(getAllServicePrices());
-parseFloat(allServicePrices);
-console.log(allServicePrices);
 fullPrice = getFullPrice(screenPrice, allServicePrices);
 console.log(fullPrice);
 console.log(getServicePercentPrices(fullPrice));
