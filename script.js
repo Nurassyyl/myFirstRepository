@@ -58,14 +58,14 @@ const appData = {
             }
             while (!appData.isNumber(price));
 
-            appData.services[name] = +price;
+            appData.services[name + " " + i] = +price;
         }
 
     },
     addPrices: function () {
-        for (let screen of appData.screens) {
-            appData.screenPrice += +screen.price;
-        }
+        appData.screenPrice = appData.screens.reduce(function (sum, current) {
+            return sum += +current.price;
+        }, 0);
         for (let key in appData.services) {
             appData.allServicePrices += appData.services[key];
         }
@@ -94,6 +94,7 @@ const appData = {
         console.log(appData.fullPrice);
         console.log(appData.servicePercentPrices);
         console.log(appData.screens);
+        console.log(appData.services);
     },
 };
 
